@@ -1,0 +1,834 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5241C2402BB326A4000233E0 /* DecorShopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C23F2BB326A4000233E0 /* DecorShopRouter.swift */; };
+		5241C2432BB326BA000233E0 /* DecorShopProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2422BB326BA000233E0 /* DecorShopProtocols.swift */; };
+		5241C2462BB326D5000233E0 /* DecorShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2452BB326D5000233E0 /* DecorShopModel.swift */; };
+		5241C24A2BB327A4000233E0 /* BoostsShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2492BB327A4000233E0 /* BoostsShopModel.swift */; };
+		5241C24C2BB327BE000233E0 /* BoostsShopProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C24B2BB327BE000233E0 /* BoostsShopProtocols.swift */; };
+		5241C24E2BB3280A000233E0 /* BoostsShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C24D2BB3280A000233E0 /* BoostsShopViewController.swift */; };
+		5241C2502BB32818000233E0 /* BoostsShopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C24F2BB32818000233E0 /* BoostsShopInteractor.swift */; };
+		5241C2522BB32824000233E0 /* BoostsShopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2512BB32824000233E0 /* BoostsShopRouter.swift */; };
+		5241C2542BB32836000233E0 /* BoostsShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2532BB32836000233E0 /* BoostsShopPresenter.swift */; };
+		5241C2562BB32850000233E0 /* BoostsShopAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2552BB32850000233E0 /* BoostsShopAssembly.swift */; };
+		5241C2582BB3285F000233E0 /* DecorShopAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2572BB3285F000233E0 /* DecorShopAssembly.swift */; };
+		5241C25A2BB34C5B000233E0 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241C2592BB34C5B000233E0 /* CharacterCell.swift */; };
+		5251D4F92BA35390009B5D9F /* RoomsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D4F82BA35390009B5D9F /* RoomsModel.swift */; };
+		5251D4FB2BA3552E009B5D9F /* RoomsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D4FA2BA3552E009B5D9F /* RoomsProtocols.swift */; };
+		5251D4FD2BA356FF009B5D9F /* RoomsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D4FC2BA356FF009B5D9F /* RoomsInteractor.swift */; };
+		5251D4FF2BA3575A009B5D9F /* RoomsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D4FE2BA3575A009B5D9F /* RoomsPresenter.swift */; };
+		5251D5012BA35884009B5D9F /* RoomsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5002BA35884009B5D9F /* RoomsRouter.swift */; };
+		5251D5032BA358F3009B5D9F /* RoomsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5022BA358F3009B5D9F /* RoomsAssembly.swift */; };
+		5251D5092BA3CA72009B5D9F /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5082BA3CA72009B5D9F /* Music.swift */; };
+		5251D5142BA43BD3009B5D9F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5132BA43BD3009B5D9F /* OnboardingViewController.swift */; };
+		5251D5162BA4406E009B5D9F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5152BA4406E009B5D9F /* PageViewController.swift */; };
+		52A744DE2B933861008CDAF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A744DD2B933861008CDAF6 /* AppDelegate.swift */; };
+		52A744E02B933861008CDAF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A744DF2B933861008CDAF6 /* SceneDelegate.swift */; };
+		52A744E72B933864008CDAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A744E62B933864008CDAF6 /* Assets.xcassets */; };
+		52A744EA2B933864008CDAF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A744E82B933864008CDAF6 /* LaunchScreen.storyboard */; };
+		52CB4CE42BA0A3D90009ED43 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4CE32BA0A3D90009ED43 /* CustomButton.swift */; };
+		52CB4CE82BA0ACDD0009ED43 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4CE72BA0ACDD0009ED43 /* RoomsViewController.swift */; };
+		52CB4CEC2BA0DFFF0009ED43 /* UIView+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4CEB2BA0DFFF0009ED43 /* UIView+Pin.swift */; };
+		52CB4CEE2BA112020009ED43 /* CustomTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4CED2BA112020009ED43 /* CustomTitle.swift */; };
+		52CB4CF52BA12C370009ED43 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4CF42BA12C370009ED43 /* SettingsViewController.swift */; };
+		52CB4CF72BA1E0720009ED43 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4CF62BA1E0720009ED43 /* RoomCell.swift */; };
+		52CB4D042BA2767F0009ED43 /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4D032BA2767F0009ED43 /* PetModel.swift */; };
+		52DF9F3D2BB218BA00F2E2B0 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F3C2BB218BA00F2E2B0 /* ShopViewController.swift */; };
+		52DF9F3F2BB218D100F2E2B0 /* ShopAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F3E2BB218D100F2E2B0 /* ShopAssembly.swift */; };
+		52DF9F412BB218E200F2E2B0 /* ShopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F402BB218E200F2E2B0 /* ShopRouter.swift */; };
+		52DF9F432BB218EE00F2E2B0 /* ShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F422BB218EE00F2E2B0 /* ShopPresenter.swift */; };
+		52DF9F452BB218FC00F2E2B0 /* ShopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F442BB218FC00F2E2B0 /* ShopInteractor.swift */; };
+		52DF9F472BB2191900F2E2B0 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F462BB2191900F2E2B0 /* SettingsAssembly.swift */; };
+		52DF9F492BB2192D00F2E2B0 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F482BB2192D00F2E2B0 /* SettingsRouter.swift */; };
+		52DF9F4B2BB2193D00F2E2B0 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F4A2BB2193D00F2E2B0 /* SettingsInteractor.swift */; };
+		52DF9F4D2BB2194F00F2E2B0 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F4C2BB2194F00F2E2B0 /* SettingsPresenter.swift */; };
+		52DF9F502BB2197300F2E2B0 /* SettingsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F4F2BB2197300F2E2B0 /* SettingsProtocols.swift */; };
+		52DF9F532BB2E1EC00F2E2B0 /* ShopProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F522BB2E1EC00F2E2B0 /* ShopProtocols.swift */; };
+		52DF9F562BB2E47300F2E2B0 /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F552BB2E47300F2E2B0 /* ShopModel.swift */; };
+		52DF9F592BB2E54800F2E2B0 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F582BB2E54800F2E2B0 /* SettingsModel.swift */; };
+		52DF9F5E2BB323F600F2E2B0 /* CharacterShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F5D2BB323F600F2E2B0 /* CharacterShopViewController.swift */; };
+		52DF9F602BB3240300F2E2B0 /* CharacterShopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F5F2BB3240300F2E2B0 /* CharacterShopRouter.swift */; };
+		52DF9F622BB3241200F2E2B0 /* CharacterShopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F612BB3241200F2E2B0 /* CharacterShopInteractor.swift */; };
+		52DF9F642BB3242100F2E2B0 /* CharacterShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F632BB3242100F2E2B0 /* CharacterShopModel.swift */; };
+		52DF9F662BB3242E00F2E2B0 /* CharacterShopProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F652BB3242E00F2E2B0 /* CharacterShopProtocols.swift */; };
+		52DF9F682BB3244100F2E2B0 /* CharacterShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F672BB3244100F2E2B0 /* CharacterShopPresenter.swift */; };
+		52DF9F6A2BB3245200F2E2B0 /* CharacterShopAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F692BB3245200F2E2B0 /* CharacterShopAssembly.swift */; };
+		52DF9F702BB325C600F2E2B0 /* DecorShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F6F2BB325C600F2E2B0 /* DecorShopViewController.swift */; };
+		52DF9F722BB325D700F2E2B0 /* DecorShopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F712BB325D700F2E2B0 /* DecorShopInteractor.swift */; };
+		52DF9F742BB3261A00F2E2B0 /* DecorShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F732BB3261A00F2E2B0 /* DecorShopPresenter.swift */; };
+		52E39DFF2BC410B2005F053A /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39DFE2BC410B2005F053A /* AboutModel.swift */; };
+		52E39E032BC410D2005F053A /* AboutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E022BC410D2005F053A /* AboutProtocols.swift */; };
+		52E39E052BC410E9005F053A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E042BC410E9005F053A /* AboutViewController.swift */; };
+		52E39E072BC410FE005F053A /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E062BC410FE005F053A /* AboutInteractor.swift */; };
+		52E39E092BC41116005F053A /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E082BC41116005F053A /* AboutPresenter.swift */; };
+		52E39E0B2BC4112A005F053A /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E0A2BC4112A005F053A /* AboutRouter.swift */; };
+		52E39E0D2BC41144005F053A /* AboutAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E0C2BC41144005F053A /* AboutAssembly.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5241C23F2BB326A4000233E0 /* DecorShopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopRouter.swift; sourceTree = "<group>"; };
+		5241C2422BB326BA000233E0 /* DecorShopProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopProtocols.swift; sourceTree = "<group>"; };
+		5241C2452BB326D5000233E0 /* DecorShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopModel.swift; sourceTree = "<group>"; };
+		5241C2492BB327A4000233E0 /* BoostsShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopModel.swift; sourceTree = "<group>"; };
+		5241C24B2BB327BE000233E0 /* BoostsShopProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopProtocols.swift; sourceTree = "<group>"; };
+		5241C24D2BB3280A000233E0 /* BoostsShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopViewController.swift; sourceTree = "<group>"; };
+		5241C24F2BB32818000233E0 /* BoostsShopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopInteractor.swift; sourceTree = "<group>"; };
+		5241C2512BB32824000233E0 /* BoostsShopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopRouter.swift; sourceTree = "<group>"; };
+		5241C2532BB32836000233E0 /* BoostsShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopPresenter.swift; sourceTree = "<group>"; };
+		5241C2552BB32850000233E0 /* BoostsShopAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopAssembly.swift; sourceTree = "<group>"; };
+		5241C2572BB3285F000233E0 /* DecorShopAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopAssembly.swift; sourceTree = "<group>"; };
+		5241C2592BB34C5B000233E0 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		5241C2602BB9AEE0000233E0 /* 1-08. Minecraft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1-08. Minecraft.mp3"; sourceTree = "<group>"; };
+		5251D4F82BA35390009B5D9F /* RoomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsModel.swift; sourceTree = "<group>"; };
+		5251D4FA2BA3552E009B5D9F /* RoomsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsProtocols.swift; sourceTree = "<group>"; };
+		5251D4FC2BA356FF009B5D9F /* RoomsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsInteractor.swift; sourceTree = "<group>"; };
+		5251D4FE2BA3575A009B5D9F /* RoomsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsPresenter.swift; sourceTree = "<group>"; };
+		5251D5002BA35884009B5D9F /* RoomsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsRouter.swift; sourceTree = "<group>"; };
+		5251D5022BA358F3009B5D9F /* RoomsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsAssembly.swift; sourceTree = "<group>"; };
+		5251D5082BA3CA72009B5D9F /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		5251D5132BA43BD3009B5D9F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		5251D5152BA4406E009B5D9F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		52A744DA2B933861008CDAF6 /* Red Bed Sleep Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red Bed Sleep Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A744DD2B933861008CDAF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52A744DF2B933861008CDAF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52A744E62B933864008CDAF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52A744E92B933864008CDAF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52A744EB2B933864008CDAF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CB4CE32BA0A3D90009ED43 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		52CB4CE72BA0ACDD0009ED43 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		52CB4CEB2BA0DFFF0009ED43 /* UIView+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Pin.swift"; sourceTree = "<group>"; };
+		52CB4CED2BA112020009ED43 /* CustomTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitle.swift; sourceTree = "<group>"; };
+		52CB4CF42BA12C370009ED43 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		52CB4CF62BA1E0720009ED43 /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		52CB4D032BA2767F0009ED43 /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
+		52DF9F3C2BB218BA00F2E2B0 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		52DF9F3E2BB218D100F2E2B0 /* ShopAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAssembly.swift; sourceTree = "<group>"; };
+		52DF9F402BB218E200F2E2B0 /* ShopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRouter.swift; sourceTree = "<group>"; };
+		52DF9F422BB218EE00F2E2B0 /* ShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopPresenter.swift; sourceTree = "<group>"; };
+		52DF9F442BB218FC00F2E2B0 /* ShopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInteractor.swift; sourceTree = "<group>"; };
+		52DF9F462BB2191900F2E2B0 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		52DF9F482BB2192D00F2E2B0 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		52DF9F4A2BB2193D00F2E2B0 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		52DF9F4C2BB2194F00F2E2B0 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		52DF9F4F2BB2197300F2E2B0 /* SettingsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocols.swift; sourceTree = "<group>"; };
+		52DF9F522BB2E1EC00F2E2B0 /* ShopProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopProtocols.swift; sourceTree = "<group>"; };
+		52DF9F552BB2E47300F2E2B0 /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
+		52DF9F582BB2E54800F2E2B0 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		52DF9F5D2BB323F600F2E2B0 /* CharacterShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShopViewController.swift; sourceTree = "<group>"; };
+		52DF9F5F2BB3240300F2E2B0 /* CharacterShopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShopRouter.swift; sourceTree = "<group>"; };
+		52DF9F612BB3241200F2E2B0 /* CharacterShopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShopInteractor.swift; sourceTree = "<group>"; };
+		52DF9F632BB3242100F2E2B0 /* CharacterShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShopModel.swift; sourceTree = "<group>"; };
+		52DF9F652BB3242E00F2E2B0 /* CharacterShopProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShopProtocols.swift; sourceTree = "<group>"; };
+		52DF9F672BB3244100F2E2B0 /* CharacterShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShopPresenter.swift; sourceTree = "<group>"; };
+		52DF9F692BB3245200F2E2B0 /* CharacterShopAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterShopAssembly.swift; sourceTree = "<group>"; };
+		52DF9F6F2BB325C600F2E2B0 /* DecorShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopViewController.swift; sourceTree = "<group>"; };
+		52DF9F712BB325D700F2E2B0 /* DecorShopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopInteractor.swift; sourceTree = "<group>"; };
+		52DF9F732BB3261A00F2E2B0 /* DecorShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopPresenter.swift; sourceTree = "<group>"; };
+		52E39DFE2BC410B2005F053A /* AboutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
+		52E39E022BC410D2005F053A /* AboutProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProtocols.swift; sourceTree = "<group>"; };
+		52E39E042BC410E9005F053A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		52E39E062BC410FE005F053A /* AboutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInteractor.swift; sourceTree = "<group>"; };
+		52E39E082BC41116005F053A /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		52E39E0A2BC4112A005F053A /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		52E39E0C2BC41144005F053A /* AboutAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAssembly.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52A744D72B933861008CDAF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5241C2412BB326AA000233E0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2422BB326BA000233E0 /* DecorShopProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5241C2442BB326C6000233E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2452BB326D5000233E0 /* DecorShopModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5241C2472BB3277E000233E0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5241C24B2BB327BE000233E0 /* BoostsShopProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5241C2482BB3278A000233E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2492BB327A4000233E0 /* BoostsShopModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5241C25F2BB9AEC5000233E0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5251D5082BA3CA72009B5D9F /* Music.swift */,
+				52A744F32B9338AB008CDAF6 /* Models */,
+				52A744F22B9338A7008CDAF6 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5241C2612BB9AFD6000233E0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F6E2BB325A300F2E2B0 /* BoostsShop */,
+				52DF9F6D2BB3259100F2E2B0 /* DecorShop */,
+				52DF9F5A2BB323C700F2E2B0 /* CharacterShop */,
+				52DF9F3B2BACCEEC00F2E2B0 /* Shop */,
+				5251D50A2BA3D571009B5D9F /* Onboarding */,
+				5251D5052BA36FB0009B5D9F /* About */,
+				5251D5042BA36FA6009B5D9F /* Settings */,
+				5251D4F52BA35345009B5D9F /* Rooms */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5241C2632BB9B974000233E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52CB4CEB2BA0DFFF0009ED43 /* UIView+Pin.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5241C2642BB9BB98000233E0 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2602BB9AEE0000233E0 /* 1-08. Minecraft.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		5241C2652BB9BC7B000233E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52A744E62B933864008CDAF6 /* Assets.xcassets */,
+				5241C2642BB9BB98000233E0 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5241C2662BB9BEB5000233E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52CB4CF62BA1E0720009ED43 /* RoomCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5241C2672BB9BF2A000233E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2592BB34C5B000233E0 /* CharacterCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5251D4F52BA35345009B5D9F /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2662BB9BEB5000233E0 /* Views */,
+				5251D4F72BA3537B009B5D9F /* Models */,
+				5251D4F62BA3536D009B5D9F /* Protocols */,
+				52CB4CE72BA0ACDD0009ED43 /* RoomsViewController.swift */,
+				5251D5022BA358F3009B5D9F /* RoomsAssembly.swift */,
+				5251D5002BA35884009B5D9F /* RoomsRouter.swift */,
+				5251D4FE2BA3575A009B5D9F /* RoomsPresenter.swift */,
+				5251D4FC2BA356FF009B5D9F /* RoomsInteractor.swift */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		5251D4F62BA3536D009B5D9F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5251D4FA2BA3552E009B5D9F /* RoomsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5251D4F72BA3537B009B5D9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5251D4F82BA35390009B5D9F /* RoomsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5251D5042BA36FA6009B5D9F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F572BB2E53800F2E2B0 /* Models */,
+				52DF9F4E2BB2195800F2E2B0 /* Protocols */,
+				52CB4CF42BA12C370009ED43 /* SettingsViewController.swift */,
+				52DF9F462BB2191900F2E2B0 /* SettingsAssembly.swift */,
+				52DF9F482BB2192D00F2E2B0 /* SettingsRouter.swift */,
+				52DF9F4A2BB2193D00F2E2B0 /* SettingsInteractor.swift */,
+				52DF9F4C2BB2194F00F2E2B0 /* SettingsPresenter.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5251D5052BA36FB0009B5D9F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				52E39E012BC410C3005F053A /* Protocols */,
+				52E39E002BC410B8005F053A /* Models */,
+				52E39E042BC410E9005F053A /* AboutViewController.swift */,
+				52E39E062BC410FE005F053A /* AboutInteractor.swift */,
+				52E39E082BC41116005F053A /* AboutPresenter.swift */,
+				52E39E0A2BC4112A005F053A /* AboutRouter.swift */,
+				52E39E0C2BC41144005F053A /* AboutAssembly.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		5251D50A2BA3D571009B5D9F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				5251D5132BA43BD3009B5D9F /* OnboardingViewController.swift */,
+				5251D5152BA4406E009B5D9F /* PageViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		52A744D12B933860008CDAF6 = {
+			isa = PBXGroup;
+			children = (
+				52A744DC2B933861008CDAF6 /* Red Bed Sleep Clicker */,
+				52A744DB2B933861008CDAF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52A744DB2B933861008CDAF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52A744DA2B933861008CDAF6 /* Red Bed Sleep Clicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52A744DC2B933861008CDAF6 /* Red Bed Sleep Clicker */ = {
+			isa = PBXGroup;
+			children = (
+				5241C25F2BB9AEC5000233E0 /* Shared */,
+				5241C2612BB9AFD6000233E0 /* Screens */,
+				5241C2632BB9B974000233E0 /* Extensions */,
+				5241C2652BB9BC7B000233E0 /* Resources */,
+				52A744DD2B933861008CDAF6 /* AppDelegate.swift */,
+				52A744DF2B933861008CDAF6 /* SceneDelegate.swift */,
+				52A744E82B933864008CDAF6 /* LaunchScreen.storyboard */,
+				52A744EB2B933864008CDAF6 /* Info.plist */,
+			);
+			path = "Red Bed Sleep Clicker";
+			sourceTree = "<group>";
+		};
+		52A744F22B9338A7008CDAF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52CB4CE32BA0A3D90009ED43 /* CustomButton.swift */,
+				52CB4CED2BA112020009ED43 /* CustomTitle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52A744F32B9338AB008CDAF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52CB4D032BA2767F0009ED43 /* PetModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52DF9F3B2BACCEEC00F2E2B0 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F542BB2E46100F2E2B0 /* Models */,
+				52DF9F512BB2E1C300F2E2B0 /* Protocols */,
+				52DF9F3C2BB218BA00F2E2B0 /* ShopViewController.swift */,
+				52DF9F3E2BB218D100F2E2B0 /* ShopAssembly.swift */,
+				52DF9F402BB218E200F2E2B0 /* ShopRouter.swift */,
+				52DF9F422BB218EE00F2E2B0 /* ShopPresenter.swift */,
+				52DF9F442BB218FC00F2E2B0 /* ShopInteractor.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		52DF9F4E2BB2195800F2E2B0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F4F2BB2197300F2E2B0 /* SettingsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52DF9F512BB2E1C300F2E2B0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F522BB2E1EC00F2E2B0 /* ShopProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52DF9F542BB2E46100F2E2B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F552BB2E47300F2E2B0 /* ShopModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52DF9F572BB2E53800F2E2B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F582BB2E54800F2E2B0 /* SettingsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52DF9F5A2BB323C700F2E2B0 /* CharacterShop */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2672BB9BF2A000233E0 /* Views */,
+				52DF9F5B2BB323DA00F2E2B0 /* Models */,
+				52DF9F5C2BB323E100F2E2B0 /* Protocols */,
+				52DF9F5D2BB323F600F2E2B0 /* CharacterShopViewController.swift */,
+				52DF9F5F2BB3240300F2E2B0 /* CharacterShopRouter.swift */,
+				52DF9F612BB3241200F2E2B0 /* CharacterShopInteractor.swift */,
+				52DF9F672BB3244100F2E2B0 /* CharacterShopPresenter.swift */,
+				52DF9F692BB3245200F2E2B0 /* CharacterShopAssembly.swift */,
+			);
+			path = CharacterShop;
+			sourceTree = "<group>";
+		};
+		52DF9F5B2BB323DA00F2E2B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F632BB3242100F2E2B0 /* CharacterShopModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52DF9F5C2BB323E100F2E2B0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F652BB3242E00F2E2B0 /* CharacterShopProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52DF9F6D2BB3259100F2E2B0 /* DecorShop */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2442BB326C6000233E0 /* Models */,
+				5241C2412BB326AA000233E0 /* Protocols */,
+				52DF9F6F2BB325C600F2E2B0 /* DecorShopViewController.swift */,
+				52DF9F712BB325D700F2E2B0 /* DecorShopInteractor.swift */,
+				52DF9F732BB3261A00F2E2B0 /* DecorShopPresenter.swift */,
+				5241C23F2BB326A4000233E0 /* DecorShopRouter.swift */,
+				5241C2572BB3285F000233E0 /* DecorShopAssembly.swift */,
+			);
+			path = DecorShop;
+			sourceTree = "<group>";
+		};
+		52DF9F6E2BB325A300F2E2B0 /* BoostsShop */ = {
+			isa = PBXGroup;
+			children = (
+				5241C2482BB3278A000233E0 /* Models */,
+				5241C2472BB3277E000233E0 /* Protocols */,
+				5241C24D2BB3280A000233E0 /* BoostsShopViewController.swift */,
+				5241C24F2BB32818000233E0 /* BoostsShopInteractor.swift */,
+				5241C2512BB32824000233E0 /* BoostsShopRouter.swift */,
+				5241C2532BB32836000233E0 /* BoostsShopPresenter.swift */,
+				5241C2552BB32850000233E0 /* BoostsShopAssembly.swift */,
+			);
+			path = BoostsShop;
+			sourceTree = "<group>";
+		};
+		52E39E002BC410B8005F053A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E39DFE2BC410B2005F053A /* AboutModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52E39E012BC410C3005F053A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52E39E022BC410D2005F053A /* AboutProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52A744D92B933861008CDAF6 /* Red Bed Sleep Clicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A744EE2B933864008CDAF6 /* Build configuration list for PBXNativeTarget "Red Bed Sleep Clicker" */;
+			buildPhases = (
+				52A744D62B933861008CDAF6 /* Sources */,
+				52A744D72B933861008CDAF6 /* Frameworks */,
+				52A744D82B933861008CDAF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Red Bed Sleep Clicker";
+			productName = "Red Bed Sleep Clicker";
+			productReference = 52A744DA2B933861008CDAF6 /* Red Bed Sleep Clicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52A744D22B933860008CDAF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					52A744D92B933861008CDAF6 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 52A744D52B933860008CDAF6 /* Build configuration list for PBXProject "Red Bed Sleep Clicker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52A744D12B933860008CDAF6;
+			productRefGroup = 52A744DB2B933861008CDAF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52A744D92B933861008CDAF6 /* Red Bed Sleep Clicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52A744D82B933861008CDAF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A744EA2B933864008CDAF6 /* LaunchScreen.storyboard in Resources */,
+				52A744E72B933864008CDAF6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52A744D62B933861008CDAF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DF9F742BB3261A00F2E2B0 /* DecorShopPresenter.swift in Sources */,
+				5251D5032BA358F3009B5D9F /* RoomsAssembly.swift in Sources */,
+				5241C2522BB32824000233E0 /* BoostsShopRouter.swift in Sources */,
+				52E39DFF2BC410B2005F053A /* AboutModel.swift in Sources */,
+				52E39E092BC41116005F053A /* AboutPresenter.swift in Sources */,
+				5251D5162BA4406E009B5D9F /* PageViewController.swift in Sources */,
+				52DF9F472BB2191900F2E2B0 /* SettingsAssembly.swift in Sources */,
+				52DF9F662BB3242E00F2E2B0 /* CharacterShopProtocols.swift in Sources */,
+				52DF9F532BB2E1EC00F2E2B0 /* ShopProtocols.swift in Sources */,
+				52E39E052BC410E9005F053A /* AboutViewController.swift in Sources */,
+				52CB4CE42BA0A3D90009ED43 /* CustomButton.swift in Sources */,
+				52DF9F562BB2E47300F2E2B0 /* ShopModel.swift in Sources */,
+				5251D4FB2BA3552E009B5D9F /* RoomsProtocols.swift in Sources */,
+				52DF9F602BB3240300F2E2B0 /* CharacterShopRouter.swift in Sources */,
+				5241C2502BB32818000233E0 /* BoostsShopInteractor.swift in Sources */,
+				52E39E0B2BC4112A005F053A /* AboutRouter.swift in Sources */,
+				52DF9F3F2BB218D100F2E2B0 /* ShopAssembly.swift in Sources */,
+				5241C2542BB32836000233E0 /* BoostsShopPresenter.swift in Sources */,
+				52CB4CEE2BA112020009ED43 /* CustomTitle.swift in Sources */,
+				52CB4D042BA2767F0009ED43 /* PetModel.swift in Sources */,
+				52DF9F412BB218E200F2E2B0 /* ShopRouter.swift in Sources */,
+				5251D4F92BA35390009B5D9F /* RoomsModel.swift in Sources */,
+				5251D5142BA43BD3009B5D9F /* OnboardingViewController.swift in Sources */,
+				5241C24A2BB327A4000233E0 /* BoostsShopModel.swift in Sources */,
+				5241C2462BB326D5000233E0 /* DecorShopModel.swift in Sources */,
+				52DF9F682BB3244100F2E2B0 /* CharacterShopPresenter.swift in Sources */,
+				5241C2562BB32850000233E0 /* BoostsShopAssembly.swift in Sources */,
+				52CB4CE82BA0ACDD0009ED43 /* RoomsViewController.swift in Sources */,
+				52DF9F502BB2197300F2E2B0 /* SettingsProtocols.swift in Sources */,
+				52DF9F622BB3241200F2E2B0 /* CharacterShopInteractor.swift in Sources */,
+				52DF9F592BB2E54800F2E2B0 /* SettingsModel.swift in Sources */,
+				52DF9F5E2BB323F600F2E2B0 /* CharacterShopViewController.swift in Sources */,
+				5241C2432BB326BA000233E0 /* DecorShopProtocols.swift in Sources */,
+				52E39E032BC410D2005F053A /* AboutProtocols.swift in Sources */,
+				52DF9F452BB218FC00F2E2B0 /* ShopInteractor.swift in Sources */,
+				5251D5012BA35884009B5D9F /* RoomsRouter.swift in Sources */,
+				5241C24E2BB3280A000233E0 /* BoostsShopViewController.swift in Sources */,
+				5251D5092BA3CA72009B5D9F /* Music.swift in Sources */,
+				52DF9F432BB218EE00F2E2B0 /* ShopPresenter.swift in Sources */,
+				52E39E0D2BC41144005F053A /* AboutAssembly.swift in Sources */,
+				52DF9F3D2BB218BA00F2E2B0 /* ShopViewController.swift in Sources */,
+				5241C2582BB3285F000233E0 /* DecorShopAssembly.swift in Sources */,
+				5251D4FF2BA3575A009B5D9F /* RoomsPresenter.swift in Sources */,
+				5241C2402BB326A4000233E0 /* DecorShopRouter.swift in Sources */,
+				52E39E072BC410FE005F053A /* AboutInteractor.swift in Sources */,
+				5241C25A2BB34C5B000233E0 /* CharacterCell.swift in Sources */,
+				52CB4CEC2BA0DFFF0009ED43 /* UIView+Pin.swift in Sources */,
+				52A744DE2B933861008CDAF6 /* AppDelegate.swift in Sources */,
+				52A744E02B933861008CDAF6 /* SceneDelegate.swift in Sources */,
+				52CB4CF72BA1E0720009ED43 /* RoomCell.swift in Sources */,
+				52DF9F6A2BB3245200F2E2B0 /* CharacterShopAssembly.swift in Sources */,
+				52DF9F492BB2192D00F2E2B0 /* SettingsRouter.swift in Sources */,
+				52DF9F642BB3242100F2E2B0 /* CharacterShopModel.swift in Sources */,
+				5251D4FD2BA356FF009B5D9F /* RoomsInteractor.swift in Sources */,
+				5241C24C2BB327BE000233E0 /* BoostsShopProtocols.swift in Sources */,
+				52DF9F722BB325D700F2E2B0 /* DecorShopInteractor.swift in Sources */,
+				52CB4CF52BA12C370009ED43 /* SettingsViewController.swift in Sources */,
+				52DF9F4B2BB2193D00F2E2B0 /* SettingsInteractor.swift in Sources */,
+				52DF9F702BB325C600F2E2B0 /* DecorShopViewController.swift in Sources */,
+				52DF9F4D2BB2194F00F2E2B0 /* SettingsPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52A744E82B933864008CDAF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52A744E92B933864008CDAF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52A744EC2B933864008CDAF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52A744ED2B933864008CDAF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52A744EF2B933864008CDAF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GS8QJHZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Red Bed Sleep Clicker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nvoter.Red-Bed-Sleep-Clicker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52A744F02B933864008CDAF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GS8QJHZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Red Bed Sleep Clicker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nvoter.Red-Bed-Sleep-Clicker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52A744D52B933860008CDAF6 /* Build configuration list for PBXProject "Red Bed Sleep Clicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A744EC2B933864008CDAF6 /* Debug */,
+				52A744ED2B933864008CDAF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A744EE2B933864008CDAF6 /* Build configuration list for PBXNativeTarget "Red Bed Sleep Clicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A744EF2B933864008CDAF6 /* Debug */,
+				52A744F02B933864008CDAF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52A744D22B933860008CDAF6 /* Project object */;
+}
