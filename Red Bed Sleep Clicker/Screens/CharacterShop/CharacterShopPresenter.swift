@@ -15,13 +15,11 @@ final class CharacterShopPresenter: CharacterShopPresentationLogic {
     
     // MARK: - PresentationLogic
     func presentStart(_ response: Model.Start.Response) {
-        let balance = response.balance
-        view?.displayStart(Model.Start.ViewModel(balanceLabel: "Balance: \(balance)"))
+        view?.displayStart(Model.Start.ViewModel(backgroundName: response.backgroundName, balanceLabel: "\(response.balance)"))
     }
     
     func presentPetPurchase(_ response: Model.PetPurchase.Response) {
-        let balance = response.balance
-        view?.displayPetPurchase(Model.PetPurchase.ViewModel(status: response.status, balanceLabel: "Balance: \(balance)"))
+        view?.displayPetPurchase(Model.PetPurchase.ViewModel(status: response.status, balanceLabel: "\(response.balance)"))
     }
     
     func presentShop(_ response: Model.Back.Response) {

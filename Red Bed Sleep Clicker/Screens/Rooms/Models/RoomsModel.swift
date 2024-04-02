@@ -5,23 +5,29 @@
 //  Created by Анастасия on 27.02.2024.
 //
 
+import Foundation
+
 enum RoomsModel {
     enum Start {
         struct Request { }
-        struct Response { 
+        struct Response {
+            var backgroundName: String
             var balance: Int
         }
-        struct ViewModel { 
+        struct ViewModel {
+            var backgroundName: String
             var balanceLabel: String
         }
     }
     
     enum PetTap {
-        struct Request { }
+        struct Request {
+            var index: Int
+        }
         struct Response {
             var balance: Int
         }
-        struct ViewModel { 
+        struct ViewModel {
             var balanceLabel: String
         }
     }
@@ -38,9 +44,15 @@ enum RoomsModel {
         struct ViewModel { }
     }
     
-//    enum Other {
-//        struct Request { }
-//        struct Response { }
-//        struct ViewModel { }
-//    }
+    enum Tutorial {
+        struct Request { }
+        struct Response { }
+        struct ViewModel { }
+    }
+    
+    enum Reload {
+        struct Request { }
+        struct Response { }
+        struct ViewModel { }
+    }
 }

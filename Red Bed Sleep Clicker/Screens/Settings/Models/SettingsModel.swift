@@ -8,8 +8,14 @@
 enum SettingsModel {
     enum Start {
         struct Request { }
-        struct Response { }
-        struct ViewModel { }
+        struct Response { 
+            var backgroundName: String
+            var volume: Float
+        }
+        struct ViewModel { 
+            var backgroundName: String
+            var volume: Float
+        }
     }
     
     enum About {
@@ -20,6 +26,14 @@ enum SettingsModel {
     
     enum Rooms {
         struct Request { }
+        struct Response { }
+        struct ViewModel { }
+    }
+    
+    enum ValueChanged {
+        struct Request { 
+            var value: Float
+        }
         struct Response { }
         struct ViewModel { }
     }

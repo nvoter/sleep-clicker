@@ -26,8 +26,7 @@
 		5251D5012BA35884009B5D9F /* RoomsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5002BA35884009B5D9F /* RoomsRouter.swift */; };
 		5251D5032BA358F3009B5D9F /* RoomsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5022BA358F3009B5D9F /* RoomsAssembly.swift */; };
 		5251D5092BA3CA72009B5D9F /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5082BA3CA72009B5D9F /* Music.swift */; };
-		5251D5142BA43BD3009B5D9F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5132BA43BD3009B5D9F /* OnboardingViewController.swift */; };
-		5251D5162BA4406E009B5D9F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251D5152BA4406E009B5D9F /* PageViewController.swift */; };
+		529B01FE2BD177E000202331 /* minecraft-ten-font-cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 529B01FD2BD177DF00202331 /* minecraft-ten-font-cyrillic.ttf */; };
 		52A744DE2B933861008CDAF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A744DD2B933861008CDAF6 /* AppDelegate.swift */; };
 		52A744E02B933861008CDAF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A744DF2B933861008CDAF6 /* SceneDelegate.swift */; };
 		52A744E72B933864008CDAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A744E62B933864008CDAF6 /* Assets.xcassets */; };
@@ -62,6 +61,11 @@
 		52DF9F702BB325C600F2E2B0 /* DecorShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F6F2BB325C600F2E2B0 /* DecorShopViewController.swift */; };
 		52DF9F722BB325D700F2E2B0 /* DecorShopInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F712BB325D700F2E2B0 /* DecorShopInteractor.swift */; };
 		52DF9F742BB3261A00F2E2B0 /* DecorShopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9F732BB3261A00F2E2B0 /* DecorShopPresenter.swift */; };
+		52E2C5012BD7314F00D9AA36 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2C5002BD7314F00D9AA36 /* NotificationsService.swift */; };
+		52E2C5032BD758A900D9AA36 /* CreeperAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2C5022BD758A800D9AA36 /* CreeperAnimationView.swift */; };
+		52E2C5052BD7597800D9AA36 /* TotalLossExplosionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2C5042BD7597800D9AA36 /* TotalLossExplosionView.swift */; };
+		52E2C5072BD76C1800D9AA36 /* minecraft-tnt-explosion-sound-effect-(hd)-made-with-Voicemod.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52E2C5062BD76C1800D9AA36 /* minecraft-tnt-explosion-sound-effect-(hd)-made-with-Voicemod.mp3 */; };
+		52E2C5092BD786F100D9AA36 /* LootServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2C5082BD786F100D9AA36 /* LootServiceTests.swift */; };
 		52E39DFF2BC410B2005F053A /* AboutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39DFE2BC410B2005F053A /* AboutModel.swift */; };
 		52E39E032BC410D2005F053A /* AboutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E022BC410D2005F053A /* AboutProtocols.swift */; };
 		52E39E052BC410E9005F053A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E042BC410E9005F053A /* AboutViewController.swift */; };
@@ -69,7 +73,42 @@
 		52E39E092BC41116005F053A /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E082BC41116005F053A /* AboutPresenter.swift */; };
 		52E39E0B2BC4112A005F053A /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E0A2BC4112A005F053A /* AboutRouter.swift */; };
 		52E39E0D2BC41144005F053A /* AboutAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E0C2BC41144005F053A /* AboutAssembly.swift */; };
+		52E39E102BC4287F005F053A /* DecorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E0F2BC4287F005F053A /* DecorCell.swift */; };
+		52E39E122BC42936005F053A /* BackgroundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E39E112BC42936005F053A /* BackgroundModel.swift */; };
+		52E39E1C2BD034A7005F053A /* MinecraftTen-VGORe.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E39E1B2BD034A7005F053A /* MinecraftTen-VGORe.ttf */; };
+		52E6FC7D2BD3C444008D561A /* CurrencyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FC7C2BD3C444008D561A /* CurrencyLabel.swift */; };
+		52E6FC802BD42AD0008D561A /* BoostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FC7F2BD42AD0008D561A /* BoostCell.swift */; };
+		52E6FC822BD42B59008D561A /* BoostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FC812BD42B59008D561A /* BoostModel.swift */; };
+		52E6FC842BD63BAD008D561A /* 1-08. Minecraft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52E6FC832BD63BAD008D561A /* 1-08. Minecraft.mp3 */; };
+		52E6FC892BD6551C008D561A /* FundsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FC882BD6551C008D561A /* FundsService.swift */; };
+		52E6FC982BD66689008D561A /* LootService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FC972BD66689008D561A /* LootService.swift */; };
+		52E6FC9A2BD66694008D561A /* ShopService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FC992BD66694008D561A /* ShopService.swift */; };
+		52E6FC9C2BD66F7E008D561A /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FC9B2BD66F7E008D561A /* ModelProtocol.swift */; };
+		52E6FCA32BD69B99008D561A /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCA22BD69B99008D561A /* AboutAppViewController.swift */; };
+		52E6FCA72BD69C3A008D561A /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCA62BD69C3A008D561A /* TutorialViewController.swift */; };
+		52E6FCA92BD69CB9008D561A /* TutorialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCA82BD69CB9008D561A /* TutorialModel.swift */; };
+		52E6FCAD2BD69CDD008D561A /* TutorialProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCAC2BD69CDD008D561A /* TutorialProtocols.swift */; };
+		52E6FCAF2BD69CEA008D561A /* TutorialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCAE2BD69CEA008D561A /* TutorialRouter.swift */; };
+		52E6FCB12BD69CFE008D561A /* TutorialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCB02BD69CFE008D561A /* TutorialInteractor.swift */; };
+		52E6FCB32BD69D12008D561A /* TutorialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCB22BD69D12008D561A /* TutorialPresenter.swift */; };
+		52E6FCB52BD69D26008D561A /* TutorialAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCB42BD69D26008D561A /* TutorialAssembly.swift */; };
+		52E6FCB72BD6A3B4008D561A /* AboutAppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCB62BD6A3B4008D561A /* AboutAppInteractor.swift */; };
+		52E6FCB92BD6A3C5008D561A /* AboutAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCB82BD6A3C5008D561A /* AboutAppRouter.swift */; };
+		52E6FCBB2BD6A3D2008D561A /* AboutAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCBA2BD6A3D2008D561A /* AboutAppPresenter.swift */; };
+		52E6FCBD2BD6A3EC008D561A /* AboutAppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCBC2BD6A3EC008D561A /* AboutAppAssembly.swift */; };
+		52E6FCC02BD6A400008D561A /* AboutAppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCBF2BD6A400008D561A /* AboutAppProtocols.swift */; };
+		52E6FCC32BD6A414008D561A /* AboutAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6FCC22BD6A414008D561A /* AboutAppModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52E6FC922BD65B9E008D561A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A744D22B933860008CDAF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A744D92B933861008CDAF6;
+			remoteInfo = "Red Bed Sleep Clicker";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5241C23F2BB326A4000233E0 /* DecorShopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopRouter.swift; sourceTree = "<group>"; };
@@ -84,7 +123,6 @@
 		5241C2552BB32850000233E0 /* BoostsShopAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsShopAssembly.swift; sourceTree = "<group>"; };
 		5241C2572BB3285F000233E0 /* DecorShopAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopAssembly.swift; sourceTree = "<group>"; };
 		5241C2592BB34C5B000233E0 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
-		5241C2602BB9AEE0000233E0 /* 1-08. Minecraft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1-08. Minecraft.mp3"; sourceTree = "<group>"; };
 		5251D4F82BA35390009B5D9F /* RoomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsModel.swift; sourceTree = "<group>"; };
 		5251D4FA2BA3552E009B5D9F /* RoomsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsProtocols.swift; sourceTree = "<group>"; };
 		5251D4FC2BA356FF009B5D9F /* RoomsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsInteractor.swift; sourceTree = "<group>"; };
@@ -92,8 +130,7 @@
 		5251D5002BA35884009B5D9F /* RoomsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsRouter.swift; sourceTree = "<group>"; };
 		5251D5022BA358F3009B5D9F /* RoomsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsAssembly.swift; sourceTree = "<group>"; };
 		5251D5082BA3CA72009B5D9F /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
-		5251D5132BA43BD3009B5D9F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		5251D5152BA4406E009B5D9F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		529B01FD2BD177DF00202331 /* minecraft-ten-font-cyrillic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minecraft-ten-font-cyrillic.ttf"; sourceTree = "<group>"; };
 		52A744DA2B933861008CDAF6 /* Red Bed Sleep Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red Bed Sleep Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A744DD2B933861008CDAF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52A744DF2B933861008CDAF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +167,11 @@
 		52DF9F6F2BB325C600F2E2B0 /* DecorShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopViewController.swift; sourceTree = "<group>"; };
 		52DF9F712BB325D700F2E2B0 /* DecorShopInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopInteractor.swift; sourceTree = "<group>"; };
 		52DF9F732BB3261A00F2E2B0 /* DecorShopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorShopPresenter.swift; sourceTree = "<group>"; };
+		52E2C5002BD7314F00D9AA36 /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
+		52E2C5022BD758A800D9AA36 /* CreeperAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreeperAnimationView.swift; sourceTree = "<group>"; };
+		52E2C5042BD7597800D9AA36 /* TotalLossExplosionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalLossExplosionView.swift; sourceTree = "<group>"; };
+		52E2C5062BD76C1800D9AA36 /* minecraft-tnt-explosion-sound-effect-(hd)-made-with-Voicemod.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "minecraft-tnt-explosion-sound-effect-(hd)-made-with-Voicemod.mp3"; sourceTree = "<group>"; };
+		52E2C5082BD786F100D9AA36 /* LootServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootServiceTests.swift; sourceTree = "<group>"; };
 		52E39DFE2BC410B2005F053A /* AboutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModel.swift; sourceTree = "<group>"; };
 		52E39E022BC410D2005F053A /* AboutProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProtocols.swift; sourceTree = "<group>"; };
 		52E39E042BC410E9005F053A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -137,10 +179,43 @@
 		52E39E082BC41116005F053A /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		52E39E0A2BC4112A005F053A /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
 		52E39E0C2BC41144005F053A /* AboutAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAssembly.swift; sourceTree = "<group>"; };
+		52E39E0F2BC4287F005F053A /* DecorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorCell.swift; sourceTree = "<group>"; };
+		52E39E112BC42936005F053A /* BackgroundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModel.swift; sourceTree = "<group>"; };
+		52E39E1B2BD034A7005F053A /* MinecraftTen-VGORe.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MinecraftTen-VGORe.ttf"; sourceTree = "<group>"; };
+		52E6FC7C2BD3C444008D561A /* CurrencyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyLabel.swift; sourceTree = "<group>"; };
+		52E6FC7F2BD42AD0008D561A /* BoostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostCell.swift; sourceTree = "<group>"; };
+		52E6FC812BD42B59008D561A /* BoostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostModel.swift; sourceTree = "<group>"; };
+		52E6FC832BD63BAD008D561A /* 1-08. Minecraft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1-08. Minecraft.mp3"; sourceTree = "<group>"; };
+		52E6FC882BD6551C008D561A /* FundsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsService.swift; sourceTree = "<group>"; };
+		52E6FC8E2BD65B9D008D561A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E6FC972BD66689008D561A /* LootService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootService.swift; sourceTree = "<group>"; };
+		52E6FC992BD66694008D561A /* ShopService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopService.swift; sourceTree = "<group>"; };
+		52E6FC9B2BD66F7E008D561A /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
+		52E6FCA22BD69B99008D561A /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		52E6FCA62BD69C3A008D561A /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		52E6FCA82BD69CB9008D561A /* TutorialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialModel.swift; sourceTree = "<group>"; };
+		52E6FCAC2BD69CDD008D561A /* TutorialProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialProtocols.swift; sourceTree = "<group>"; };
+		52E6FCAE2BD69CEA008D561A /* TutorialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialRouter.swift; sourceTree = "<group>"; };
+		52E6FCB02BD69CFE008D561A /* TutorialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialInteractor.swift; sourceTree = "<group>"; };
+		52E6FCB22BD69D12008D561A /* TutorialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPresenter.swift; sourceTree = "<group>"; };
+		52E6FCB42BD69D26008D561A /* TutorialAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialAssembly.swift; sourceTree = "<group>"; };
+		52E6FCB62BD6A3B4008D561A /* AboutAppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppInteractor.swift; sourceTree = "<group>"; };
+		52E6FCB82BD6A3C5008D561A /* AboutAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppRouter.swift; sourceTree = "<group>"; };
+		52E6FCBA2BD6A3D2008D561A /* AboutAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppPresenter.swift; sourceTree = "<group>"; };
+		52E6FCBC2BD6A3EC008D561A /* AboutAppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppAssembly.swift; sourceTree = "<group>"; };
+		52E6FCBF2BD6A400008D561A /* AboutAppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppProtocols.swift; sourceTree = "<group>"; };
+		52E6FCC22BD6A414008D561A /* AboutAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		52A744D72B933861008CDAF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E6FC8B2BD65B9D008D561A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,7 +260,6 @@
 		5241C25F2BB9AEC5000233E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				5251D5082BA3CA72009B5D9F /* Music.swift */,
 				52A744F32B9338AB008CDAF6 /* Models */,
 				52A744F22B9338A7008CDAF6 /* Views */,
 			);
@@ -218,7 +292,8 @@
 		5241C2642BB9BB98000233E0 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				5241C2602BB9AEE0000233E0 /* 1-08. Minecraft.mp3 */,
+				52E6FC832BD63BAD008D561A /* 1-08. Minecraft.mp3 */,
+				52E2C5062BD76C1800D9AA36 /* minecraft-tnt-explosion-sound-effect-(hd)-made-with-Voicemod.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -226,6 +301,7 @@
 		5241C2652BB9BC7B000233E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				529B01FF2BD177EB00202331 /* Fonts */,
 				52A744E62B933864008CDAF6 /* Assets.xcassets */,
 				5241C2642BB9BB98000233E0 /* Sounds */,
 			);
@@ -236,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				52CB4CF62BA1E0720009ED43 /* RoomCell.swift */,
+				52E2C5022BD758A800D9AA36 /* CreeperAnimationView.swift */,
+				52E2C5042BD7597800D9AA36 /* TotalLossExplosionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,16 +388,26 @@
 		5251D50A2BA3D571009B5D9F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				5251D5132BA43BD3009B5D9F /* OnboardingViewController.swift */,
-				5251D5152BA4406E009B5D9F /* PageViewController.swift */,
+				52E6FCA42BD69BE1008D561A /* FirstScreen */,
+				52E6FCA52BD69BF4008D561A /* SecondScreen */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		529B01FF2BD177EB00202331 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				529B01FD2BD177DF00202331 /* minecraft-ten-font-cyrillic.ttf */,
+				52E39E1B2BD034A7005F053A /* MinecraftTen-VGORe.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		52A744D12B933860008CDAF6 = {
 			isa = PBXGroup;
 			children = (
 				52A744DC2B933861008CDAF6 /* Red Bed Sleep Clicker */,
+				52E6FC8F2BD65B9E008D561A /* Tests */,
 				52A744DB2B933861008CDAF6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -328,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				52A744DA2B933861008CDAF6 /* Red Bed Sleep Clicker.app */,
+				52E6FC8E2BD65B9D008D561A /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,6 +424,7 @@
 		52A744DC2B933861008CDAF6 /* Red Bed Sleep Clicker */ = {
 			isa = PBXGroup;
 			children = (
+				52E6FC852BD642E9008D561A /* Services */,
 				5241C25F2BB9AEC5000233E0 /* Shared */,
 				5241C2612BB9AFD6000233E0 /* Screens */,
 				5241C2632BB9B974000233E0 /* Extensions */,
@@ -352,6 +442,7 @@
 			children = (
 				52CB4CE32BA0A3D90009ED43 /* CustomButton.swift */,
 				52CB4CED2BA112020009ED43 /* CustomTitle.swift */,
+				52E6FC7C2BD3C444008D561A /* CurrencyLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -360,6 +451,9 @@
 			isa = PBXGroup;
 			children = (
 				52CB4D032BA2767F0009ED43 /* PetModel.swift */,
+				52E39E112BC42936005F053A /* BackgroundModel.swift */,
+				52E6FC812BD42B59008D561A /* BoostModel.swift */,
+				52E6FC9B2BD66F7E008D561A /* ModelProtocol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -417,9 +511,9 @@
 				52DF9F5B2BB323DA00F2E2B0 /* Models */,
 				52DF9F5C2BB323E100F2E2B0 /* Protocols */,
 				52DF9F5D2BB323F600F2E2B0 /* CharacterShopViewController.swift */,
-				52DF9F5F2BB3240300F2E2B0 /* CharacterShopRouter.swift */,
 				52DF9F612BB3241200F2E2B0 /* CharacterShopInteractor.swift */,
 				52DF9F672BB3244100F2E2B0 /* CharacterShopPresenter.swift */,
+				52DF9F5F2BB3240300F2E2B0 /* CharacterShopRouter.swift */,
 				52DF9F692BB3245200F2E2B0 /* CharacterShopAssembly.swift */,
 			);
 			path = CharacterShop;
@@ -444,6 +538,7 @@
 		52DF9F6D2BB3259100F2E2B0 /* DecorShop */ = {
 			isa = PBXGroup;
 			children = (
+				52E39E0E2BC4286F005F053A /* Views */,
 				5241C2442BB326C6000233E0 /* Models */,
 				5241C2412BB326AA000233E0 /* Protocols */,
 				52DF9F6F2BB325C600F2E2B0 /* DecorShopViewController.swift */,
@@ -458,6 +553,7 @@
 		52DF9F6E2BB325A300F2E2B0 /* BoostsShop */ = {
 			isa = PBXGroup;
 			children = (
+				52E6FC7E2BD42AB9008D561A /* Views */,
 				5241C2482BB3278A000233E0 /* Models */,
 				5241C2472BB3277E000233E0 /* Protocols */,
 				5241C24D2BB3280A000233E0 /* BoostsShopViewController.swift */,
@@ -485,6 +581,102 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		52E39E0E2BC4286F005F053A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E39E0F2BC4287F005F053A /* DecorCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52E6FC7E2BD42AB9008D561A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E6FC7F2BD42AD0008D561A /* BoostCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52E6FC852BD642E9008D561A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5251D5082BA3CA72009B5D9F /* Music.swift */,
+				52E6FC882BD6551C008D561A /* FundsService.swift */,
+				52E6FC972BD66689008D561A /* LootService.swift */,
+				52E6FC992BD66694008D561A /* ShopService.swift */,
+				52E2C5002BD7314F00D9AA36 /* NotificationsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		52E6FC8F2BD65B9E008D561A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				52E2C5082BD786F100D9AA36 /* LootServiceTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		52E6FCA42BD69BE1008D561A /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52E6FCC12BD6A409008D561A /* Models */,
+				52E6FCBE2BD6A3F0008D561A /* Protocols */,
+				52E6FCA22BD69B99008D561A /* AboutAppViewController.swift */,
+				52E6FCB62BD6A3B4008D561A /* AboutAppInteractor.swift */,
+				52E6FCB82BD6A3C5008D561A /* AboutAppRouter.swift */,
+				52E6FCBA2BD6A3D2008D561A /* AboutAppPresenter.swift */,
+				52E6FCBC2BD6A3EC008D561A /* AboutAppAssembly.swift */,
+			);
+			path = FirstScreen;
+			sourceTree = "<group>";
+		};
+		52E6FCA52BD69BF4008D561A /* SecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				52E6FCAB2BD69CC9008D561A /* Protocols */,
+				52E6FCAA2BD69CBD008D561A /* Models */,
+				52E6FCA62BD69C3A008D561A /* TutorialViewController.swift */,
+				52E6FCAE2BD69CEA008D561A /* TutorialRouter.swift */,
+				52E6FCB02BD69CFE008D561A /* TutorialInteractor.swift */,
+				52E6FCB22BD69D12008D561A /* TutorialPresenter.swift */,
+				52E6FCB42BD69D26008D561A /* TutorialAssembly.swift */,
+			);
+			path = SecondScreen;
+			sourceTree = "<group>";
+		};
+		52E6FCAA2BD69CBD008D561A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E6FCA82BD69CB9008D561A /* TutorialModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52E6FCAB2BD69CC9008D561A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52E6FCAC2BD69CDD008D561A /* TutorialProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52E6FCBE2BD6A3F0008D561A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52E6FCBF2BD6A400008D561A /* AboutAppProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52E6FCC12BD6A409008D561A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E6FCC22BD6A414008D561A /* AboutAppModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -505,6 +697,24 @@
 			productReference = 52A744DA2B933861008CDAF6 /* Red Bed Sleep Clicker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		52E6FC8D2BD65B9D008D561A /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E6FC942BD65B9E008D561A /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				52E6FC8A2BD65B9D008D561A /* Sources */,
+				52E6FC8B2BD65B9D008D561A /* Frameworks */,
+				52E6FC8C2BD65B9D008D561A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52E6FC932BD65B9E008D561A /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 52E6FC8E2BD65B9D008D561A /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -517,6 +727,11 @@
 				TargetAttributes = {
 					52A744D92B933861008CDAF6 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					52E6FC8D2BD65B9D008D561A = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1530;
+						TestTargetID = 52A744D92B933861008CDAF6;
 					};
 				};
 			};
@@ -534,6 +749,7 @@
 			projectRoot = "";
 			targets = (
 				52A744D92B933861008CDAF6 /* Red Bed Sleep Clicker */,
+				52E6FC8D2BD65B9D008D561A /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -543,8 +759,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529B01FE2BD177E000202331 /* minecraft-ten-font-cyrillic.ttf in Resources */,
 				52A744EA2B933864008CDAF6 /* LaunchScreen.storyboard in Resources */,
+				52E2C5072BD76C1800D9AA36 /* minecraft-tnt-explosion-sound-effect-(hd)-made-with-Voicemod.mp3 in Resources */,
+				52E39E1C2BD034A7005F053A /* MinecraftTen-VGORe.ttf in Resources */,
 				52A744E72B933864008CDAF6 /* Assets.xcassets in Resources */,
+				52E6FC842BD63BAD008D561A /* 1-08. Minecraft.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E6FC8C2BD65B9D008D561A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,68 +784,108 @@
 			files = (
 				52DF9F742BB3261A00F2E2B0 /* DecorShopPresenter.swift in Sources */,
 				5251D5032BA358F3009B5D9F /* RoomsAssembly.swift in Sources */,
+				52E2C5012BD7314F00D9AA36 /* NotificationsService.swift in Sources */,
 				5241C2522BB32824000233E0 /* BoostsShopRouter.swift in Sources */,
 				52E39DFF2BC410B2005F053A /* AboutModel.swift in Sources */,
+				52E6FC892BD6551C008D561A /* FundsService.swift in Sources */,
 				52E39E092BC41116005F053A /* AboutPresenter.swift in Sources */,
-				5251D5162BA4406E009B5D9F /* PageViewController.swift in Sources */,
 				52DF9F472BB2191900F2E2B0 /* SettingsAssembly.swift in Sources */,
 				52DF9F662BB3242E00F2E2B0 /* CharacterShopProtocols.swift in Sources */,
 				52DF9F532BB2E1EC00F2E2B0 /* ShopProtocols.swift in Sources */,
 				52E39E052BC410E9005F053A /* AboutViewController.swift in Sources */,
 				52CB4CE42BA0A3D90009ED43 /* CustomButton.swift in Sources */,
+				52E6FCB12BD69CFE008D561A /* TutorialInteractor.swift in Sources */,
 				52DF9F562BB2E47300F2E2B0 /* ShopModel.swift in Sources */,
 				5251D4FB2BA3552E009B5D9F /* RoomsProtocols.swift in Sources */,
 				52DF9F602BB3240300F2E2B0 /* CharacterShopRouter.swift in Sources */,
 				5241C2502BB32818000233E0 /* BoostsShopInteractor.swift in Sources */,
+				52E6FCBB2BD6A3D2008D561A /* AboutAppPresenter.swift in Sources */,
 				52E39E0B2BC4112A005F053A /* AboutRouter.swift in Sources */,
+				52E6FC7D2BD3C444008D561A /* CurrencyLabel.swift in Sources */,
+				52E6FCB72BD6A3B4008D561A /* AboutAppInteractor.swift in Sources */,
 				52DF9F3F2BB218D100F2E2B0 /* ShopAssembly.swift in Sources */,
+				52E6FC9C2BD66F7E008D561A /* ModelProtocol.swift in Sources */,
 				5241C2542BB32836000233E0 /* BoostsShopPresenter.swift in Sources */,
 				52CB4CEE2BA112020009ED43 /* CustomTitle.swift in Sources */,
 				52CB4D042BA2767F0009ED43 /* PetModel.swift in Sources */,
 				52DF9F412BB218E200F2E2B0 /* ShopRouter.swift in Sources */,
+				52E6FCAD2BD69CDD008D561A /* TutorialProtocols.swift in Sources */,
+				52E6FCA92BD69CB9008D561A /* TutorialModel.swift in Sources */,
 				5251D4F92BA35390009B5D9F /* RoomsModel.swift in Sources */,
-				5251D5142BA43BD3009B5D9F /* OnboardingViewController.swift in Sources */,
 				5241C24A2BB327A4000233E0 /* BoostsShopModel.swift in Sources */,
 				5241C2462BB326D5000233E0 /* DecorShopModel.swift in Sources */,
+				52E2C5052BD7597800D9AA36 /* TotalLossExplosionView.swift in Sources */,
 				52DF9F682BB3244100F2E2B0 /* CharacterShopPresenter.swift in Sources */,
 				5241C2562BB32850000233E0 /* BoostsShopAssembly.swift in Sources */,
 				52CB4CE82BA0ACDD0009ED43 /* RoomsViewController.swift in Sources */,
+				52E6FCB32BD69D12008D561A /* TutorialPresenter.swift in Sources */,
+				52E6FCC02BD6A400008D561A /* AboutAppProtocols.swift in Sources */,
 				52DF9F502BB2197300F2E2B0 /* SettingsProtocols.swift in Sources */,
 				52DF9F622BB3241200F2E2B0 /* CharacterShopInteractor.swift in Sources */,
 				52DF9F592BB2E54800F2E2B0 /* SettingsModel.swift in Sources */,
 				52DF9F5E2BB323F600F2E2B0 /* CharacterShopViewController.swift in Sources */,
 				5241C2432BB326BA000233E0 /* DecorShopProtocols.swift in Sources */,
+				52E6FCA72BD69C3A008D561A /* TutorialViewController.swift in Sources */,
+				52E6FCB92BD6A3C5008D561A /* AboutAppRouter.swift in Sources */,
+				52E6FCA32BD69B99008D561A /* AboutAppViewController.swift in Sources */,
+				52E6FC9A2BD66694008D561A /* ShopService.swift in Sources */,
 				52E39E032BC410D2005F053A /* AboutProtocols.swift in Sources */,
+				52E6FCB52BD69D26008D561A /* TutorialAssembly.swift in Sources */,
 				52DF9F452BB218FC00F2E2B0 /* ShopInteractor.swift in Sources */,
+				52E6FC982BD66689008D561A /* LootService.swift in Sources */,
 				5251D5012BA35884009B5D9F /* RoomsRouter.swift in Sources */,
 				5241C24E2BB3280A000233E0 /* BoostsShopViewController.swift in Sources */,
 				5251D5092BA3CA72009B5D9F /* Music.swift in Sources */,
 				52DF9F432BB218EE00F2E2B0 /* ShopPresenter.swift in Sources */,
 				52E39E0D2BC41144005F053A /* AboutAssembly.swift in Sources */,
 				52DF9F3D2BB218BA00F2E2B0 /* ShopViewController.swift in Sources */,
+				52E39E122BC42936005F053A /* BackgroundModel.swift in Sources */,
 				5241C2582BB3285F000233E0 /* DecorShopAssembly.swift in Sources */,
 				5251D4FF2BA3575A009B5D9F /* RoomsPresenter.swift in Sources */,
+				52E2C5032BD758A900D9AA36 /* CreeperAnimationView.swift in Sources */,
 				5241C2402BB326A4000233E0 /* DecorShopRouter.swift in Sources */,
 				52E39E072BC410FE005F053A /* AboutInteractor.swift in Sources */,
 				5241C25A2BB34C5B000233E0 /* CharacterCell.swift in Sources */,
 				52CB4CEC2BA0DFFF0009ED43 /* UIView+Pin.swift in Sources */,
+				52E6FCC32BD6A414008D561A /* AboutAppModel.swift in Sources */,
+				52E6FC802BD42AD0008D561A /* BoostCell.swift in Sources */,
 				52A744DE2B933861008CDAF6 /* AppDelegate.swift in Sources */,
 				52A744E02B933861008CDAF6 /* SceneDelegate.swift in Sources */,
 				52CB4CF72BA1E0720009ED43 /* RoomCell.swift in Sources */,
 				52DF9F6A2BB3245200F2E2B0 /* CharacterShopAssembly.swift in Sources */,
+				52E39E102BC4287F005F053A /* DecorCell.swift in Sources */,
 				52DF9F492BB2192D00F2E2B0 /* SettingsRouter.swift in Sources */,
+				52E6FCBD2BD6A3EC008D561A /* AboutAppAssembly.swift in Sources */,
 				52DF9F642BB3242100F2E2B0 /* CharacterShopModel.swift in Sources */,
 				5251D4FD2BA356FF009B5D9F /* RoomsInteractor.swift in Sources */,
 				5241C24C2BB327BE000233E0 /* BoostsShopProtocols.swift in Sources */,
+				52E6FC822BD42B59008D561A /* BoostModel.swift in Sources */,
 				52DF9F722BB325D700F2E2B0 /* DecorShopInteractor.swift in Sources */,
 				52CB4CF52BA12C370009ED43 /* SettingsViewController.swift in Sources */,
+				52E6FCAF2BD69CEA008D561A /* TutorialRouter.swift in Sources */,
 				52DF9F4B2BB2193D00F2E2B0 /* SettingsInteractor.swift in Sources */,
 				52DF9F702BB325C600F2E2B0 /* DecorShopViewController.swift in Sources */,
 				52DF9F4D2BB2194F00F2E2B0 /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52E6FC8A2BD65B9D008D561A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E2C5092BD786F100D9AA36 /* LootServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52E6FC932BD65B9E008D561A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A744D92B933861008CDAF6 /* Red Bed Sleep Clicker */;
+			targetProxy = 52E6FC922BD65B9E008D561A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		52A744E82B933864008CDAF6 /* LaunchScreen.storyboard */ = {
@@ -763,8 +1030,7 @@
 				INFOPLIST_FILE = "Red Bed Sleep Clicker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -791,8 +1057,7 @@
 				INFOPLIST_FILE = "Red Bed Sleep Clicker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -804,6 +1069,45 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52E6FC952BD65B9E008D561A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GS8QJHZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nvoter.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Red Bed Sleep Clicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Red Bed Sleep Clicker";
+			};
+			name = Debug;
+		};
+		52E6FC962BD65B9E008D561A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GS8QJHZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nvoter.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Red Bed Sleep Clicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Red Bed Sleep Clicker";
 			};
 			name = Release;
 		};
@@ -824,6 +1128,15 @@
 			buildConfigurations = (
 				52A744EF2B933864008CDAF6 /* Debug */,
 				52A744F02B933864008CDAF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E6FC942BD65B9E008D561A /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E6FC952BD65B9E008D561A /* Debug */,
+				52E6FC962BD65B9E008D561A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

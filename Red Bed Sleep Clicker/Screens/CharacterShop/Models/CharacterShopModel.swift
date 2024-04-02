@@ -9,17 +9,18 @@ enum CharacterShopModel {
     enum Start {
         struct Request { }
         struct Response {
+            var backgroundName: String
             var balance: Int
         }
         struct ViewModel {
+            var backgroundName: String
             var balanceLabel: String
         }
     }
     
     enum PetPurchase {
         struct Request {
-            var price: Int
-            var balance: Int
+            var character: PetModel
         }
         struct Response {
             var status: Bool

@@ -12,18 +12,12 @@ final class ShopViewController: UIViewController,
     // MARK: - Constants
     private enum Constants {
         static let fatalError: String = "init(coder:) has not been implemented"
-        
-        static let backgroundImageName: String = "background"
-        
         static let titleViewText: String = "SHOP"
-        
         static let roomsButtonText: String = "ROOMS"
         static let settingsButtonText: String = "SETTINGS"
         static let charactersShopButtonText: String = "CHARACTERS"
         static let decorShopButtonText: String = "DECOR"
         static let boostsShopButtonText: String = "BOOSTS"
-        
-        static let width: CGFloat = 360
         static let menuButtonWidth: CGFloat = 175
         static let height: CGFloat = 70
     }
@@ -32,11 +26,10 @@ final class ShopViewController: UIViewController,
     private let titleView: CustomTitle = CustomTitle(titleText: Constants.titleViewText)
     private let roomsButton: CustomButton = CustomButton(title: Constants.roomsButtonText)
     private let settingsButton: CustomButton = CustomButton(title: Constants.settingsButtonText)
-    private let background: UIImageView = UIImageView(image: UIImage(named: Constants.backgroundImageName))
+    private var background: UIImageView = UIImageView(image: nil)
     private let charactersShopButton: CustomButton = CustomButton(title: Constants.charactersShopButtonText)
     private let decorShopButton: CustomButton = CustomButton(title: Constants.decorShopButtonText)
     private let boostsShopButton: CustomButton = CustomButton(title: Constants.boostsShopButtonText)
-    
     private let router: ShopRoutingLogic
     private let interactor: (ShopBusinessLogic & ShopDataSource)
     
@@ -58,7 +51,6 @@ final class ShopViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        configureUI()
         interactor.loadStart(Model.Start.Request())
     }
     
@@ -75,104 +67,113 @@ final class ShopViewController: UIViewController,
     
     private func configureBackground() {
         view.addSubview(background)
-        
         background.pinCenter(to: view)
     }
     
     private func configureTitle() {
         view.addSubview(titleView)
-        
-        titleView.setWidth(Constants.width)
+        titleView.setWidth(Double(view.frame.width) - 20)
         titleView.setHeight(Constants.height)
         titleView.pinCenterX(to: view)
         titleView.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
     }
     
-    private func configureRoomsButton() {
-        view.addSubview(roomsButton)
-        
-        roomsButton.setWidth(Constants.menuButtonWidth)
-        roomsButton.setHeight(Constants.height)
-        roomsButton.pinLeft(to: view.leadingAnchor, 15)
-        roomsButton.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
-        roomsButton.setFontSize(fontSize: 40)
-        
-        roomsButton.addTarget(self, action: #selector(roomsWasTapped), for: .touchUpInside)
-    }
-    
     private func configureSettingsButton() {
         view.addSubview(settingsButton)
-        
-        settingsButton.setWidth(Constants.menuButtonWidth)
+        settingsButton.setWidth(Double(view.frame.width - 25) / 2)
         settingsButton.setHeight(Constants.height)
-        settingsButton.pinRight(to: view.trailingAnchor, 15)
+        settingsButton.pinLeft(to: view.centerXAnchor, 5)
         settingsButton.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
-        settingsButton.setFontSize(fontSize: 40)
-        
+        settingsButton.setFontSize(fontSize: 38)
         settingsButton.addTarget(self, action: #selector(settingsWasTapped), for: .touchUpInside)
+    }
+    
+    private func configureRoomsButton() {
+        view.addSubview(roomsButton)
+        roomsButton.setWidth(Double(view.frame.width - 25) / 2)
+        roomsButton.setHeight(Constants.height)
+        roomsButton.pinRight(to: view.centerXAnchor, 5)
+        roomsButton.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
+        roomsButton.setFontSize(fontSize: 40)
+        roomsButton.addTarget(self, action: #selector(roomsWasTapped), for: .touchUpInside)
     }
     
     private func configureCharactersShopButton() {
         view.addSubview(charactersShopButton)
-        
-        charactersShopButton.setWidth(Constants.width)
+        charactersShopButton.setWidth(Double(view.frame.width) - 20)
         charactersShopButton.setHeight(Constants.height)
         charactersShopButton.pinCenterX(to: view)
         charactersShopButton.pinBottom(to: decorShopButton.topAnchor, 10)
-        
         charactersShopButton.addTarget(self, action: #selector(charactersShopWasTapped), for: .touchUpInside)
     }
     
     private func configureDecorShopButton() {
         view.addSubview(decorShopButton)
-        
-        decorShopButton.setWidth(Constants.width)
+        decorShopButton.setWidth(Double(view.frame.width) - 20)
         decorShopButton.setHeight(Constants.height)
         decorShopButton.pinCenterX(to: view)
         decorShopButton.pinCenterY(to: view)
-        
         decorShopButton.addTarget(self, action: #selector(decorShopWasTapped), for: .touchUpInside)
     }
     
     private func configureBoostsShopButton() {
         view.addSubview(boostsShopButton)
-        
-        boostsShopButton.setWidth(Constants.width)
+        boostsShopButton.setWidth(Double(view.frame.width) - 20)
         boostsShopButton.setHeight(Constants.height)
         boostsShopButton.pinCenterX(to: view)
         boostsShopButton.pinTop(to: decorShopButton.bottomAnchor, 10)
-        
         boostsShopButton.addTarget(self, action: #selector(boostsShopWasTapped), for: .touchUpInside)
     }
     
     // MARK: - Actions
     @objc
     private func roomsWasTapped() {
-        router.routeToRooms()
+        interactor.loadRooms(ShopModel.Rooms.Request())
     }
     
     @objc
     private func settingsWasTapped() {
-        router.routeToSettings()
+        interactor.loadSettings(ShopModel.Settings.Request())
     }
     
     @objc
     private func charactersShopWasTapped() {
-        router.routeToCharactersShop()
+        interactor.loadCharactersShop(ShopModel.CharacterShop.Request())
     }
     
     @objc
     private func decorShopWasTapped() {
-        router.routeToDecorShop()
+        interactor.loadDecorShop(ShopModel.DecorShop.Request())
     }
     
     @objc
     private func boostsShopWasTapped() {
-        router.routeToBoostsShop()
+        interactor.loadBoostsShop(ShopModel.BoostsShop.Request())
     }
     
     // MARK: - DisplayLogic
     func displayStart(_ viewModel: Model.Start.ViewModel) {
-        
+        background = UIImageView(image: UIImage(named: viewModel.backgroundName))
+        configureUI()
+    }
+    
+    func displayRooms(_ request: Model.Rooms.ViewModel) {
+        router.routeToRooms()
+    }
+    
+    func displaySettings(_ request: Model.Settings.ViewModel) {
+        router.routeToSettings()
+    }
+    
+    func displayCharactersShop(_ request: Model.CharacterShop.ViewModel) {
+        router.routeToCharactersShop()
+    }
+    
+    func displayDecorShop(_ request: Model.DecorShop.ViewModel) {
+        router.routeToDecorShop()
+    }
+    
+    func displayBoostsShop(_ request: Model.BoostsShop.ViewModel) {
+        router.routeToBoostsShop()
     }
 }

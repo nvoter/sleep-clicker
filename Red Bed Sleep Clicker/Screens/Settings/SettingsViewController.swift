@@ -15,13 +15,12 @@ final class SettingsViewController: UIViewController,
     }
     
     // MARK: - Fields
-    let background: UIImageView = UIImageView(image: UIImage(named: "background"))
+    var background: UIImageView = UIImageView(image: nil)
     let titleView: CustomTitle = CustomTitle(titleText: "SETTINGS")
     let roomsButton: CustomButton = CustomButton(title: "ROOMS")
     var valueChanged: ((Double) -> Void)?
     let notificationsButton: CustomButton = CustomButton(title: "NOTIFICATIONS", subtitle: "ON")
-    private let soundsView: UIImageView = UIImageView(image: UIImage(named: "nameplate"))
-    private let soundsLabel: UILabel = UILabel()
+    let soundsView: CustomTitle = CustomTitle(titleText: "SOUNDS", subtitleText: "")
     let soundsSlider: UISlider = UISlider()
     let aboutScreenButton: CustomButton = CustomButton(title: "ABOUT")
     var notificationsAllowed: Bool = true
@@ -68,72 +67,54 @@ final class SettingsViewController: UIViewController,
     
     private func configureTitleView() {
         view.addSubview(titleView)
-        
         titleView.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
         titleView.pinCenterX(to: view)
-        titleView.setWidth(360)
+        titleView.setWidth(Double(view.frame.width) - 20)
         titleView.setHeight(70)
     }
     
     private func configureRoomsButton() {
         view.addSubview(roomsButton)
-        
-        roomsButton.setWidth(360)
+        roomsButton.setWidth(Double(view.frame.width) - 20)
         roomsButton.setHeight(70)
         roomsButton.pinCenterX(to: view)
         roomsButton.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
         roomsButton.setFontSize(fontSize: 40)
-        
         roomsButton.addTarget(self, action: #selector(roomsButtonTapped), for: .touchUpInside)
     }
     
     private func configureNotificationsButton() {
         view.addSubview(notificationsButton)
-        
-        notificationsButton.setWidth(360)
+        notificationsButton.setWidth(Double(view.frame.width) - 20)
         notificationsButton.setHeight(70)
         notificationsButton.pinTop(to: titleView.bottomAnchor, 170)
         notificationsButton.pinCenterX(to: view)
         notificationsButton.setFontSize(fontSize: 25)
-        
         notificationsButton.addTarget(self, action: #selector(notificationsButtonTapped), for: .touchUpInside)
     }
     
     private func configureSoundsView() {
+        soundsSlider.isContinuous = true
         soundsSlider.maximumValue = 100.0
         soundsSlider.minimumValue = 0.0
-        soundsSlider.value = 100.0
         soundsSlider.minimumTrackTintColor = .black
         soundsSlider.setThumbImage(UIImage(named: "sliderThumb"), for: .normal)
-        
         view.addSubview(soundsView)
-        
         soundsView.image = UIImage(named: "nameplate")
-        soundsView.setWidth(360)
+        soundsView.setWidth(Double(view.frame.width) - 20)
         soundsView.setHeight(70)
         soundsView.pinCenterX(to: view)
         soundsView.pinTop(to: notificationsButton.bottomAnchor, 10)
-        
-        view.addSubview(soundsLabel)
-        
-        soundsLabel.text = "SOUNDS"
-        soundsLabel.font = UIFont.boldSystemFont(ofSize: 25)
-        soundsLabel.pinCenterX(to: view)
-        soundsLabel.pinTop(to: soundsView.topAnchor, 5)
-        
         view.addSubview(soundsSlider)
-
-        
         soundsSlider.setWidth(250)
         soundsSlider.pinCenterX(to: view)
-        soundsSlider.pinCenterY(to: view, 35)
+        soundsSlider.pinCenterY(to: view)
         soundsSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
     
     private func configureAboutScreenButton() {
         view.addSubview(aboutScreenButton)
-        
-        aboutScreenButton.setWidth(360)
+        aboutScreenButton.setWidth(Double(view.frame.width) - 20)
         aboutScreenButton.setHeight(70)
         aboutScreenButton.pinCenterX(to: view)
         aboutScreenButton.pinTop(to: soundsView.bottomAnchor, 10)
@@ -144,19 +125,21 @@ final class SettingsViewController: UIViewController,
     // MARK: - Actions
     @objc
     private func notificationsButtonTapped() {
-        if (notificationsAllowed) {
+        if (!NotificationService.allowed) {
             notificationsButton.setSubtitle(subtitle: "OFF")
-            notificationsAllowed = false
+            NotificationService.allowed = false
+            NotificationService.shared.removeScheduledNotifications()
         } else {
             notificationsButton.setSubtitle(subtitle: "ON")
-            notificationsAllowed = true
+            NotificationService.allowed = true
+            NotificationService.shared.scheduleNotification(title: "Red Bed sleep clicker", body: "Don't forget to check your characters today", time: DateComponents(timeZone: .current, hour: 8, minute: 30), identifier: "identifier")
         }
     }
     
     @objc
     private func sliderValueChanged() {
         let volume = self.soundsSlider.value / 100
-        Music.player?.setVolume(volume, fadeDuration: .infinity)
+        interactor.loadValueChanged(SettingsModel.ValueChanged.Request(value: volume))
     }
     
     @objc
@@ -166,12 +149,14 @@ final class SettingsViewController: UIViewController,
     
     @objc
     private func roomsButtonTapped() {
-        navigationController?.popViewController(animated: false)
+        interactor.loadRooms(SettingsModel.Rooms.Request())
     }
     
     // MARK: - DisplayLogic
     func displayStart(_ viewModel: Model.Start.ViewModel) {
+        background = UIImageView(image: UIImage(named: viewModel.backgroundName))
         configureUI()
+        soundsSlider.value = viewModel.volume * 100
     }
     
     func displayAbout(_ viewModel: Model.About.ViewModel) {

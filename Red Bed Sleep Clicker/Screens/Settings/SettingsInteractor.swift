@@ -5,8 +5,11 @@
 //  Created by Анастасия on 29.02.2024.
 //
 
+import Foundation
+
 final class SettingsInteractor: SettingsBusinessLogic {
     // MARK: - Fields
+    private let defaults = UserDefaults.standard
     private let presenter: SettingsPresentationLogic
     
     // MARK: - Lifecycle
@@ -16,7 +19,11 @@ final class SettingsInteractor: SettingsBusinessLogic {
     
     // MARK: - BusinessLogic
     func loadStart(_ request: Model.Start.Request) {
-        presenter.presentStart(Model.Start.Response())
+        var volume: Float = 100.0
+        if defaults.object(forKey: "volume level") != nil {
+            volume = defaults.float(forKey: "volume level")
+        }
+        presenter.presentStart(Model.Start.Response(backgroundName: defaults.string(forKey: "backgroundName") ?? "stone", volume: volume))
     }
     
     func loadAbout(_ request: Model.About.Request) {
@@ -25,5 +32,10 @@ final class SettingsInteractor: SettingsBusinessLogic {
     
     func loadRooms(_ request: Model.Rooms.Request) {
         presenter.presentRooms(Model.Rooms.Response())
+    }
+    
+    func loadValueChanged(_ request: Model.ValueChanged.Request) {
+        Music.shared.changeVolume(value: request.value)
+        defaults.setValue(request.value, forKey: "volume level")
     }
 }

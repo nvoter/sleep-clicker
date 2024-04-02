@@ -7,36 +7,33 @@
 
 import UIKit
 
-#warning("TODO: make it structure")
-
-enum Statement {
+public enum Statement {
     case awake
-    case exhausted
     case asleep
-    case overslept
     case dead
 }
 
-final class PetModel {
-    var name: String
-    var hp: Int
-    var cheerfulness: Int
-    var statement: Statement
-    var sleepingImage: UIImage?
-    var awakeImage: UIImage?
-    var shopImage: UIImage?
-    var price: Int
-    var sleepingTime: TimeInterval
+public final class PetModel: ModelProtocol {
+    public var name: String
+    public var hp: Int
+    public var cheerfulness: Int
+    public var statement: Statement
+    public var sleepingImage: UIImage?
+    public var awakeImage: UIImage?
+    public var shopImage: UIImage
+    public var price: Int
+    public var sleepingTime: Int
+    public var timer: Timer?
     
-    var image: UIImage? {
-        if (statement == Statement.awake || statement == Statement.exhausted) {
+    public var image: UIImage? {
+        if (statement == Statement.awake) {
             return awakeImage
         } else {
             return sleepingImage
         }
     }
     
-    init(
+    public init(
         name: String,
         hp: Int = 100,
         cheerfulness: Int = 100,
@@ -49,8 +46,33 @@ final class PetModel {
         statement = Statement.awake
         self.sleepingImage = sleepingImage
         self.awakeImage = awakeImage
-        shopImage = awakeImage
+        shopImage = awakeImage!
         price = 1
         sleepingTime = 8
+    }
+    
+    func startCheerfulnessTimer() {
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
+            self?.updateCheerfulness()
+        }
+    }
+    
+    func updateCheerfulness() {
+        if statement == .awake {
+            cheerfulness -= 10
+            if (cheerfulness < 0) {
+                cheerfulness = 0
+                hp -= 20
+            }
+        } else {
+            cheerfulness += 10
+            if (cheerfulness > 100) {
+                cheerfulness = 100
+                hp -= 20
+            }
+        }
+        if (hp == 0) {
+            statement = .dead
+        }
     }
 }

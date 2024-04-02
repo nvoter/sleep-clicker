@@ -10,6 +10,7 @@ protocol SettingsBusinessLogic {
     func loadStart(_ request: Model.Start.Request)
     func loadAbout(_ request: Model.About.Request)
     func loadRooms(_ request: Model.Rooms.Request)
+    func loadValueChanged(_ request: Model.ValueChanged.Request)
     // func load(_ request: Model..Request)
 }
 

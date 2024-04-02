@@ -8,8 +8,12 @@
 enum AboutModel {
     enum Start {
         struct Request { }
-        struct Response { }
-        struct ViewModel { }
+        struct Response { 
+            var backgroundName: String
+        }
+        struct ViewModel { 
+            var backgroundName: String
+        }
     }
     
     //    enum Other {

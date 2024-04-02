@@ -12,16 +12,9 @@ final class CharacterShopViewController: UIViewController,
     // MARK: - Constants
     private enum Constants {
         static let fatalError: String = "init(coder:) has not been implemented"
-        
-        static let backgroundImageName: String = "background"
-        
         static let titleViewText: String = "SHOP"
-        
-        static let width: CGFloat = 360
         static let height: CGFloat = 70
-        
         static let backButtonText: String = "BACK"
-        
         static let collectionPinConstant: CGFloat = 100
         static let collectionHeight: CGFloat = 560
     }
@@ -29,17 +22,16 @@ final class CharacterShopViewController: UIViewController,
     // MARK: - Fields
     lazy var collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (view.frame.width - 50) / 2, height: (view.frame.height + 20) / 4)
+        layout.itemSize = CGSize(width: (view.frame.width - 30) / 2, height: (view.frame.height - 40) / 4)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = .clear
         return collection
     }()
     
-    private let background: UIImageView = UIImageView(image: UIImage(named: Constants.backgroundImageName))
+    private var background: UIImageView = UIImageView(image: nil)
     private let titleView: CustomTitle = CustomTitle(titleText: Constants.titleViewText)
     private let backButton: CustomButton = CustomButton(title: Constants.backButtonText)
-    private let balanceLabel: UILabel = UILabel()
-    
+    private var balanceLabel: CurrencyLabel = CurrencyLabel()
     private let router: CharacterShopRoutingLogic
     private let interactor: (CharacterShopBusinessLogic & CharacterShopDataSource)
     
@@ -61,7 +53,6 @@ final class CharacterShopViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        configureUI()
         interactor.loadStart(Model.Start.Request())
     }
     
@@ -69,21 +60,19 @@ final class CharacterShopViewController: UIViewController,
     private func configureUI() {
         configureBackground()
         configureTitle()
-        configureCollection()
         configureBackButton()
         configureBalanceLabel()
+        configureCollection()
     }
     
     private func configureBackground() {
         view.addSubview(background)
-        
         background.pinCenter(to: view)
     }
     
     private func configureTitle() {
         view.addSubview(titleView)
-        
-        titleView.setWidth(Constants.width)
+        titleView.setWidth(Double(view.frame.width) - 20)
         titleView.setHeight(Constants.height)
         titleView.pinCenterX(to: view)
         titleView.pinTop(to: view.safeAreaLayoutGuide.topAnchor)
@@ -91,13 +80,17 @@ final class CharacterShopViewController: UIViewController,
     
     private func configureBackButton() {
         view.addSubview(backButton)
-        
-        backButton.setWidth(Constants.width)
+        backButton.setWidth(Double(view.frame.width) - 20)
         backButton.setHeight(Constants.height)
         backButton.pinBottom(to: view.safeAreaLayoutGuide.bottomAnchor)
         backButton.pinCenterX(to: view)
-        
         backButton.addTarget(self, action: #selector(backWasTapped), for: .touchUpInside)
+    }
+    
+    private func configureBalanceLabel() {
+        view.addSubview(balanceLabel)
+        balanceLabel.pinTop(to: titleView.bottomAnchor, 10)
+        balanceLabel.pinCenterX(to: view)
     }
     
     private func configureCollection() {
@@ -105,23 +98,12 @@ final class CharacterShopViewController: UIViewController,
         collection.delegate = self
         collection.register(CharacterCell.self, forCellWithReuseIdentifier: CharacterCell.characterCellId)
         collection.layer.masksToBounds = true
-        
         view.addSubview(collection)
-        
         collection.pinCenterX(to: view)
         collection.pinTop(to: titleView.bottomAnchor, Constants.collectionPinConstant)
-        collection.setWidth(Constants.width)
+        collection.setWidth(Double(view.frame.width) - 20)
         collection.setHeight(Constants.collectionHeight)
     }
-    
-    private func configureBalanceLabel() {
-        view.addSubview(balanceLabel)
-        
-        balanceLabel.pinLeft(to: view, 15)
-        balanceLabel.font = UIFont.boldSystemFont(ofSize: 40)
-        balanceLabel.pinTop(to: titleView.bottomAnchor, 10)
-    }
-    
     // MARK: - Actions
     @objc
     private func backWasTapped() {
@@ -131,20 +113,22 @@ final class CharacterShopViewController: UIViewController,
     // MARK: - DisplayLogic
     func displayStart(_ viewModel: Model.Start.ViewModel) {
         collection.reloadData()
-        balanceLabel.text = viewModel.balanceLabel
+        balanceLabel.currencyLabel.text = viewModel.balanceLabel
+        background = UIImageView(image: UIImage(named: viewModel.backgroundName))
+        configureUI()
     }
     
     func displayPetPurchase(_ viewModel: Model.PetPurchase.ViewModel) {
         if (viewModel.status == false) {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.balanceLabel.textColor = .red
-                self.balanceLabel.layoutIfNeeded()
-            }, completion: { _ in
-                self.balanceLabel.textColor = .black
-                self.balanceLabel.layoutIfNeeded()
-            })
+//            UIView.animate(withDuration: 0.5, animations: {
+//                self.balanceLabel.textColor = .red
+//                self.balanceLabel.layoutIfNeeded()
+//            }, completion: { _ in
+//                self.balanceLabel.textColor = .black
+//                self.balanceLabel.layoutIfNeeded()
+//            })
         }
-        balanceLabel.text = viewModel.balanceLabel
+        balanceLabel.currencyLabel.text = viewModel.balanceLabel
     }
     
     func displayShop(_ viewModel: Model.Back.ViewModel) {
@@ -173,6 +157,6 @@ extension CharacterShopViewController: UICollectionViewDataSource {
 extension CharacterShopViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let character = interactor.characters[indexPath.row]
-        interactor.loadPetPurchase(CharacterShopModel.PetPurchase.Request(price: character.price, balance: RoomsInteractor.balance))
+        interactor.loadPetPurchase(CharacterShopModel.PetPurchase.Request(character: character))
     }
 }

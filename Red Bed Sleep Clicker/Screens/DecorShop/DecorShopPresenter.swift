@@ -15,6 +15,14 @@ final class DecorShopPresenter: DecorShopPresentationLogic {
     
     // MARK: - PresentationLogic
     func presentStart(_ response: Model.Start.Response) {
-        view?.displayStart(Model.Start.ViewModel())
+        view?.displayStart(Model.Start.ViewModel(backgroundName: response.backgroundName, balanceLabel: "\(response.balance)"))
+    }
+    
+    func presentBackgroundPurchase(_ response: Model.BackgroundPurchase.Response) {
+        view?.displayBackgroundPurchase(Model.BackgroundPurchase.ViewModel(status: response.status, balanceLabel: "\(response.balance)"))
+    }
+    
+    func presentShop(_ response: Model.Back.Response) {
+        view?.displayShop(Model.Back.ViewModel())
     }
 }

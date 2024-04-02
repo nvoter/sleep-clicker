@@ -6,6 +6,7 @@
 //
 
 final class ShopPresenter: ShopPresentationLogic {
+    
     // MARK: - Constants
     private enum Constants {
         
@@ -15,6 +16,26 @@ final class ShopPresenter: ShopPresentationLogic {
     
     // MARK: - PresentationLogic
     func presentStart(_ response: Model.Start.Response) {
-        view?.displayStart(Model.Start.ViewModel())
+        view?.displayStart(Model.Start.ViewModel(backgroundName: response.backgroundName))
+    }
+    
+    func presentRooms(_ request: Model.Rooms.Response) {
+        view?.displayRooms(Model.Rooms.ViewModel())
+    }
+    
+    func presentSettings(_ request: Model.Settings.Response) {
+        view?.displaySettings(Model.Settings.ViewModel())
+    }
+    
+    func presentCharactersShop(_ request: Model.CharacterShop.Response) {
+        view?.displayCharactersShop(Model.CharacterShop.ViewModel())
+    }
+    
+    func presentDecorShop(_ request: Model.DecorShop.Response) {
+        view?.displayDecorShop(Model.DecorShop.ViewModel())
+    }
+    
+    func presentBoostsShop(_ request: Model.BoostsShop.Response) {
+        view?.displayBoostsShop(Model.BoostsShop.ViewModel())
     }
 }

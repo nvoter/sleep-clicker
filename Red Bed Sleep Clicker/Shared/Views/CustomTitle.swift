@@ -13,8 +13,17 @@ final class CustomTitle: UIImageView {
         
     }
     
-    private let titleLabel: UILabel = UILabel()
-    private let subtitle: UILabel = UILabel()
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Minecraft Ten", size: 60)
+        return label
+    }()
+    
+    let subtitle: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Minecraft Ten", size: 20)
+        return label
+    }()
     
     init(titleText: String) {
         super.init(frame: CGRect())
@@ -39,26 +48,21 @@ final class CustomTitle: UIImageView {
     }
     
     private func configureTitle() {
-        titleLabel.pinCenterX(to: self)
-        titleLabel.pinCenterY(to: self)
-        
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 40)
-        
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        layer.shadowOpacity = 0.5
+        layer.shadowOpacity = 1
+        titleLabel.pinCenterX(to: self)
+        titleLabel.pinCenterY(to: self, 5)
     }
     
     private func configureTitleWithSubtitle() {
-        titleLabel.pinCenterX(to: self)
-        titleLabel.pinTop(to: self.topAnchor, 5)
-        subtitle.pinTop(to: titleLabel.bottomAnchor, 5)
-        subtitle.pinCenterX(to: self)
-        
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 25)
-        
+        titleLabel.font = UIFont(name: "Minecraft Ten", size: 25)
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        layer.shadowOpacity = 0.5
+        layer.shadowOpacity = 1
+        titleLabel.pinCenterX(to: self)
+        titleLabel.pinTop(to: self, 10)
+        subtitle.pinCenterX(to: self)
+        subtitle.pinTop(to: titleLabel.bottomAnchor, 3)
     }
 }

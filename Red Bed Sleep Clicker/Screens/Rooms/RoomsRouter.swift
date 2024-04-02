@@ -20,4 +20,9 @@ final class RoomsRouter: RoomsRoutingLogic {
         let vc = ShopAssembly.build()
         view?.navigationController?.pushViewController(vc, animated: false)
     }
+    
+    func routeToTutorial() {
+        let vc = TutorialAssembly.build()
+        view?.present(vc, animated: true)
+    }
 }

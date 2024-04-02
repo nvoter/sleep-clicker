@@ -5,6 +5,8 @@
 //  Created by Анастасия on 27.02.2024.
 //
 
+import Foundation
+
 final class RoomsPresenter: RoomsPresentationLogic {
     
     // MARK: - Constants
@@ -16,15 +18,11 @@ final class RoomsPresenter: RoomsPresentationLogic {
     
     // MARK: - RoomsPresentationLogic
     func presentStart(_ response: Model.Start.Response) {
-        let balance = response.balance
-        view?.displayStart(Model.Start.ViewModel(balanceLabel: "Balance: \(balance)"))
+        view?.displayStart(Model.Start.ViewModel(backgroundName: response.backgroundName, balanceLabel: "\(response.balance)"))
     }
     
     func presentPetTap(_ response: Model.PetTap.Response) {
-        var balance = response.balance
-        balance += 1
-        RoomsInteractor.balance += 1
-        view?.displayPetTap(Model.PetTap.ViewModel(balanceLabel: "Balance: \(balance)"))
+        view?.displayPetTap(Model.PetTap.ViewModel(balanceLabel: "\(response.balance)"))
     }
     
     func presentSettings(_ response: Model.Settings.Response) {
@@ -33,5 +31,15 @@ final class RoomsPresenter: RoomsPresentationLogic {
     
     func presentShop(_ response: Model.Shop.Response) {
         view?.displayShop(RoomsModel.Shop.ViewModel())
+    }
+    
+    func presentTutorial(_ response: Model.Tutorial.Response) {
+        view?.displayTutorial(RoomsModel.Tutorial.ViewModel())
+    }
+    
+    func presentReload(_ response: Model.Reload.Response) {
+        DispatchQueue.main.async { [weak view] in
+            view?.displayReload(Model.Reload.ViewModel())
+        }
     }
 }

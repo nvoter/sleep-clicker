@@ -15,7 +15,7 @@ final class SettingsPresenter: SettingsPresentationLogic {
     
     // MARK: - PresentationLogic
     func presentStart(_ response: Model.Start.Response) {
-        view?.displayStart(Model.Start.ViewModel())
+        view?.displayStart(Model.Start.ViewModel(backgroundName: response.backgroundName, volume: response.volume))
     }
     
     func presentAbout(_ response: Model.About.Response) {

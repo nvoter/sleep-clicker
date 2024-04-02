@@ -7,31 +7,30 @@
 
 import UIKit
 
-final class CharacterShopInteractor: CharacterShopBusinessLogic, CharacterShopDataSource {
+public final class CharacterShopInteractor: CharacterShopBusinessLogic, CharacterShopDataSource {
     // MARK: - Fields
+    private let defaults = UserDefaults.standard
+    private let fundsService: FundsService
+    private let lootService: LootService = LootService.shared
+    private let shopService: ShopService
     var characters: [PetModel] = []
-    
     private let presenter: CharacterShopPresentationLogic
     
     // MARK: - Lifecycle
     init(presenter: CharacterShopPresentationLogic) {
         self.presenter = presenter
+        shopService = ShopService(lootService: lootService)
+        fundsService = FundsService(defaults: defaults)
     }
     
     // MARK: - RoomsBusinessLogic
     func loadStart(_ request: Model.Start.Request) {
-        characters = [PetModel(name: "Steve", sleepingImage: UIImage(named: "sleeping Steve"), awakeImage: UIImage(named: "awake Steve")), PetModel (name: "Alex", sleepingImage: UIImage(named: "sleeping Alex"), awakeImage: UIImage(named: "awake Alex")), PetModel(name: "Villager", sleepingImage: UIImage(named: "sleeping Villager"), awakeImage: UIImage(named: "awake Villager")), PetModel(name: "Enderman", sleepingImage: UIImage(named: "sleeping Enderman"), awakeImage: UIImage(named: "awake Enderman"))]
-        presenter.presentStart(Model.Start.Response(balance: RoomsInteractor.balance))
+        characters = shopService.getCharacters()
+        presenter.presentStart(Model.Start.Response(backgroundName: defaults.string(forKey: "backgroundName") ?? "stone", balance: fundsService.getBalance()))
     }
     
     func loadPetPurchase(_ request: Model.PetPurchase.Request) {
-        var balance = RoomsInteractor.balance
-        let price = request.price
-        if (balance >= price) {
-            RoomsInteractor.balance -= price
-            presenter.presentPetPurchase(Model.PetPurchase.Response(status: true, balance: RoomsInteractor.balance))
-        }
-        presenter.presentPetPurchase(Model.PetPurchase.Response(status: false, balance: RoomsInteractor.balance))
+        presenter.presentPetPurchase(CharacterShopModel.PetPurchase.Response(status: shopService.buyItem(item: request.character), balance: fundsService.getBalance()))
     }
     
     func loadShop(_ request: Model.Back.Request) {
